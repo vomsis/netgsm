@@ -1,0 +1,32 @@
+{
+    "name": "vomsis/netgsm",
+    "description": "NetGsm Sms Entegrasyonu",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ramazan Uç",
+            "email": "ramazan.uc@odaxa.com.tr"
+        }
+    ],
+    "require": {
+        "illuminate/support":"5.*",
+        "illuminate/session": "5.*",
+        "guzzlehttp/guzzle": "~6.0"
+    },
+    "autoload":{
+        "psr-4":{
+            "Vomsis\\Netgsm\\": "src/"
+        }
+    },
+    "extra":{
+        "laravel":{
+            "providers":[
+                "Vomsis\\Netgsm\\NetgsmServiceProvider"
+            ],
+            "aliases":{
+                "Netgsm": "Vomsis\\Netgsm\\NetgsmFacade"
+            }
+        }
+    }
+}
