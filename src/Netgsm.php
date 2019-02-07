@@ -70,13 +70,13 @@ class Netgsm
             $content = $response->getBody()->getContents();
 
             if($content == '20')
-                throw new MessageException('Mesaj metniniz hatalı veya standart maximum karakter sayısını geçiyor');
+                throw new MessageException('Mesaj metniniz hatalı veya standart maximum karakter sayısını geçiyor', 20);
             elseif($content=='30')
-                throw new AuthException('Geçersiz kullanıcı adı veya şifre yada Api erişiniz bulunmamakta');
+                throw new AuthException('Geçersiz kullanıcı adı veya şifre yada Api erişiniz bulunmamakta', 30);
             elseif($content=='40')
-                throw new HeaderException('Mesaj başlığınız sistemde tanımlı değil');
+                throw new HeaderException('Mesaj başlığınız sistemde tanımlı değil', 40);
             elseif($content=='70')
-                throw new ParameterException('Gönderim parametreleri hatalı');
+                throw new ParameterException('Gönderim parametreleri hatalı', 70);
 
             $exp=explode(' ',$content);
 
