@@ -10,8 +10,8 @@
         }
     ],
     "require": {
-        "illuminate/support":"5.*",
-        "illuminate/session": "5.*",
+        "illuminate/support":"^5.0|^6.0|^7.0",
+        "illuminate/session": "^5.0|^6.0|^7.0",
         "guzzlehttp/guzzle": "~6.0"
     },
     "autoload":{
